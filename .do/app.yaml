@@ -1,0 +1,59 @@
+# DigitalOcean App Platform Configuration
+name: ai-volunteer-matching-platform
+region: nyc
+
+# Frontend (React)
+static_sites:
+  - name: frontend
+    source_dir: /
+    github:
+      branch: main
+      deploy_on_push: true
+    build_command: npm run build
+    output_dir: dist
+    index_document: index.html
+    error_document: index.html
+    routes:
+      - path: /
+    envs:
+      - key: NODE_ENV
+        value: "production"
+
+# Backend (Node.js)
+services:
+  - name: backend
+    source_dir: /
+    github:
+      branch: main
+      deploy_on_push: true
+    build_command: npm install
+    run_command: node server.cjs
+    environment_slug: node-js
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    http_port: 4000
+    envs:
+      - key: NODE_ENV
+        value: "production"
+      - key: PORT
+        value: "4000"
+      - key: DATABASE_NAME
+        value: "MAUKA"
+      # These will be set manually in DigitalOcean dashboard:
+      # - key: MONGODB_URI
+      #   value: "your_mongodb_connection_string"
+      # - key: OPENAI_API_KEY  
+      #   value: "your_openai_api_key"
+
+# Database (Optional - can use external MongoDB)
+databases:
+  - name: mongodb
+    engine: MONGODB
+    version: "5"
+    size: basic
+    num_nodes: 1
+
+# Domain configuration (optional)
+domains:
+  - domain: your-domain.com
+    type: PRIMARY
