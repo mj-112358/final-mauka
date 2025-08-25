@@ -1,0 +1,392 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'EB Garamond', Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(249, 115, 22, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 115, 22, 0.6);
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(249, 115, 22, 0.2);
+  color: inherit;
+}
+
+/* Focus styles */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid rgba(249, 115, 22, 0.5);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+a {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes float-delayed {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(-1deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes scroll-indicator {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(12px); opacity: 0; }
+}
+
+/* Magnetic hover effects */
+@keyframes magnetic-pull {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.05) rotate(1deg); }
+  100% { transform: scale(1.1) rotate(0deg); }
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Glow pulse */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(249, 115, 22, 0.6); }
+}
+
+/* Hero Text Animations */
+@keyframes slide-up-1 {
+  0% { opacity: 0; transform: translateY(100px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up-2 {
+  0% { opacity: 0; transform: translateY(100px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up-3 {
+  0% { opacity: 0; transform: translateY(100px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up-4 {
+  0% { opacity: 0; transform: translateY(100px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up-5 {
+  0% { opacity: 0; transform: translateY(100px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-up-delayed {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-up-more-delayed {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Card Animations */
+@keyframes card-1 {
+  0% { opacity: 0; transform: translateX(50px) translateY(20px); }
+  100% { opacity: 1; transform: translateX(0) translateY(0); }
+}
+
+@keyframes card-2 {
+  0% { opacity: 0; transform: translateX(50px) translateY(20px); }
+  100% { opacity: 1; transform: translateX(0) translateY(0); }
+}
+
+@keyframes card-3 {
+  0% { opacity: 0; transform: translateX(50px) translateY(20px); }
+  100% { opacity: 1; transform: translateX(0) translateY(0); }
+}
+
+/* Program Animations */
+@keyframes program-1 {
+  0% { opacity: 0; transform: translateY(50px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes program-2 {
+  0% { opacity: 0; transform: translateY(50px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes program-3 {
+  0% { opacity: 0; transform: translateY(50px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes program-4 {
+  0% { opacity: 0; transform: translateY(50px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Stats Animations */
+@keyframes stat-1 {
+  0% { opacity: 0; transform: translateY(30px) scale(0.8); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes stat-2 {
+  0% { opacity: 0; transform: translateY(30px) scale(0.8); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes stat-3 {
+  0% { opacity: 0; transform: translateY(30px) scale(0.8); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes stat-4 {
+  0% { opacity: 0; transform: translateY(30px) scale(0.8); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Get Involved Animations */
+@keyframes volunteer-card {
+  0% { opacity: 0; transform: translateY(50px) rotateY(-10deg); }
+  100% { opacity: 1; transform: translateY(0) rotateY(0deg); }
+}
+
+@keyframes donate-card {
+  0% { opacity: 0; transform: translateY(50px) rotateY(10deg); }
+  100% { opacity: 1; transform: translateY(0) rotateY(0deg); }
+}
+
+/* Apply animations */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 8s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 10s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+.animate-scroll-indicator {
+  animation: scroll-indicator 2s ease-in-out infinite;
+}
+
+.animate-slide-up-1 {
+  animation: slide-up-1 0.8s ease-out 0.1s both;
+}
+
+.animate-slide-up-2 {
+  animation: slide-up-2 0.8s ease-out 0.2s both;
+}
+
+.animate-slide-up-3 {
+  animation: slide-up-3 0.8s ease-out 0.3s both;
+}
+
+.animate-slide-up-4 {
+  animation: slide-up-4 0.8s ease-out 0.4s both;
+}
+
+.animate-slide-up-5 {
+  animation: slide-up-5 0.8s ease-out 0.5s both;
+}
+
+.animate-fade-in-up-delayed {
+  animation: fade-in-up-delayed 0.8s ease-out 0.6s both;
+}
+
+.animate-fade-in-up-more-delayed {
+  animation: fade-in-up-more-delayed 0.8s ease-out 0.8s both;
+}
+
+.animate-card-1 {
+  animation: card-1 0.8s ease-out 0.2s both;
+}
+
+.animate-card-2 {
+  animation: card-2 0.8s ease-out 0.4s both;
+}
+
+.animate-card-3 {
+  animation: card-3 0.8s ease-out 0.6s both;
+}
+
+.animate-program-1 {
+  animation: program-1 0.8s ease-out 0.1s both;
+}
+
+.animate-program-2 {
+  animation: program-2 0.8s ease-out 0.2s both;
+}
+
+.animate-program-3 {
+  animation: program-3 0.8s ease-out 0.3s both;
+}
+
+.animate-program-4 {
+  animation: program-4 0.8s ease-out 0.4s both;
+}
+
+.animate-stat-1 {
+  animation: stat-1 0.8s ease-out 0.1s both;
+}
+
+.animate-stat-2 {
+  animation: stat-2 0.8s ease-out 0.2s both;
+}
+
+.animate-stat-3 {
+  animation: stat-3 0.8s ease-out 0.3s both;
+}
+
+.animate-stat-4 {
+  animation: stat-4 0.8s ease-out 0.4s both;
+}
+
+.animate-volunteer-card {
+  animation: volunteer-card 0.8s ease-out 0.2s both;
+}
+
+.animate-donate-card {
+  animation: donate-card 0.8s ease-out 0.4s both;
+}
+
+/* Intersection Observer Animations */
+.animate-in-trigger.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Magnetic Button Effect */
+.magnetic-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.magnetic-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.magnetic-button:hover::before {
+  left: 100%;
+}
+
+/* Ensure text remains readable during webfont load */
+@font-face {
+  font-display: swap;
+}
+
+/* Glassmorphism effects */
+.backdrop-blur-xl {
+  backdrop-filter: blur(24px);
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
+/* Custom gradient text */
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Smooth page transitions */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .bg-gradient-to-r,
+  .bg-gradient-to-br,
+  .bg-gradient-to-b {
+    background: #f97316;
+  }
+  
+  .text-transparent {
+    color: #f97316 !important;
+  }
+}
