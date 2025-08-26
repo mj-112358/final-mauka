@@ -7,14 +7,14 @@ const Contact: React.FC = () => {
   const teamMembers = [
     {
       name: 'Aadarsh Tripathy',
-      role: 'Head of Mauka',
+      role: 'President',
       email: 'atripathy@jpischool.com',
       grade: '12F',
       photo: '/images/team/aadarsh pic.png'
     },
     {
       name: 'Arsh Choudhary',
-      role: 'Head of Mauka',
+      role: 'President',
       email: 'arshchoudhary009@gmail.com',
       photo: '/images/team/arsh pic .jpeg'
     },
@@ -35,12 +35,6 @@ const Contact: React.FC = () => {
       role: 'Head of Technology',
       email: 'mgupta1@jpischool.com',
       photo: '/images/team/mj pic.jpeg'
-    },
-    {
-      name: 'Veer Gupta',
-      role: 'Head of Technology',
-      email: 'vgupta15@jpischool.com',
-      photo: '/images/team/veer pic  copy.jpeg'
     },
     {
       name: 'Aarush Gupta',

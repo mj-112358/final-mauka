@@ -8,7 +8,6 @@ import GetInvolved from './components/GetInvolved';
 import Footer from './components/Footer';
 import VolunteerMatching from './components/VolunteerMatching';
 import Contact from './components/Contact';
-import Donate from './components/Donate';
 import FAQ from './components/FAQ';
 import Privacy from './components/Privacy';
 import Terms from './components/Terms';
@@ -21,9 +20,7 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case 'contact':
-        return <Contact />;
-      case 'donate':
-        return <Donate />;
+        return <Contact />
       case 'faq':
         return <FAQ />;
       case 'privacy':

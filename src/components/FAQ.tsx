@@ -103,22 +103,7 @@ const FAQ: React.FC = () => {
         </div>
 
         {/* Contact CTA */}
-        <div className="text-center mt-20">
-          <div className="p-8 rounded-3xl bg-gradient-to-br from-white/90 to-orange-50/80 backdrop-blur-sm border border-orange-200/50">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Still have questions?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              We're here to help! Reach out to our team and we'll get back to you as soon as possible.
-            </p>
-            <a 
-              href="#contact"
-              className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
-            >
-              Contact Our Team
-            </a>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

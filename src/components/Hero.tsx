@@ -37,10 +37,7 @@ const Hero: React.FC = () => {
           <div ref={textRef} className="space-y-8">
             {/* Main Headline */}
             <div className="space-y-6">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-100/80 backdrop-blur-sm border border-orange-200/50 text-orange-700 text-sm font-medium shadow-lg shadow-orange-500/10">
-                <Sparkles className="w-4 h-4 mr-2 animate-spin-slow" />
-                Creating Opportunities for Youth
-              </div>
+            
 
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-gray-900 leading-[0.85] tracking-tighter">
                 <span className="inline-block bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 bg-clip-text text-transparent hover:scale-105 transition-transform duration-500 cursor-default">
@@ -98,16 +95,6 @@ const Hero: React.FC = () => {
                 </span>
               </button>
               
-              <button 
-                onClick={() => navigateToPage('donate')}
-                className="group relative bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-amber-500/50 transform overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                <span className="relative z-10 flex items-center justify-center">
-                  Support with a Donation
-                  <ArrowRight className="ml-3 w-5 h-5 transform group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" />
-                </span>
-              </button>
             </div>
           </div>
         
